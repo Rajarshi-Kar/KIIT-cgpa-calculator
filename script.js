@@ -9,21 +9,11 @@ function calculateCGPA() {
     const dslGrade = parseFloat(document.getElementById('dsl').value) || 0;
     const dsdlGrade = parseFloat(document.getElementById('dsdl').value) || 0;
 
-    // Define credits for each subject
-    const dsCredits = 4;
-    const psCredits = 4;
-    const aflCredits = 4;
-    const dsdCredits = 3;
-    const stwCredits = 2;
-    const ind4Credits = 2;
-    const dslCredits = 1;
-    const dsdlCredits = 1;
-
     // Calculate total credits and weighted grades
-    const totalCredits = dsCredits + psCredits + aflCredits + dsdCredits + stwCredits + ind4Credits + dslCredits + dsdlCredits;
-    const weightedGradesSum = (dsGrade * dsCredits) + (psGrade * psCredits) + (aflGrade * aflCredits) +
-                              (dsdGrade * dsdCredits) + (stwGrade * stwCredits) + (ind4Grade * ind4Credits) +
-                              (dslGrade * dslCredits) + (dsdlGrade * dsdlCredits);
+    const totalCredits = 21;
+    const weightedGradesSum = (dsGrade * 4) + (psGrade * 4) + (aflGrade * 4) +
+                              (dsdGrade * 3) + (stwGrade * 2) + (ind4Grade * 2) +
+                              (dslGrade * 1) + (dsdlGrade * 1);
 
     // Calculate CGPA
     const cgpa = weightedGradesSum / totalCredits;
@@ -31,6 +21,7 @@ function calculateCGPA() {
     // Display CGPA in a popup
     alert(`Your resultant CGPA is: ${cgpa.toFixed(2)}`);
 }
+
 
 
 
