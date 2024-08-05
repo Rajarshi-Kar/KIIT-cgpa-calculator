@@ -1,5 +1,5 @@
 function calculateCGPA() {
-    // Get the values for each subject
+    // Get the values for each subject and ensure they are numbers
     const dsGrade = parseFloat(document.getElementById('ds').value) || 0;
     const psGrade = parseFloat(document.getElementById('ps').value) || 0;
     const aflGrade = parseFloat(document.getElementById('afl').value) || 0;
@@ -10,7 +10,7 @@ function calculateCGPA() {
     const dsdlGrade = parseFloat(document.getElementById('dsdl').value) || 0;
 
     // Calculate total credits and weighted grades
-    const totalCredits = 21;
+    const totalCredits = 21; // Adjust if needed
     const weightedGradesSum = (dsGrade * 4) + (psGrade * 4) + (aflGrade * 4) +
                               (dsdGrade * 3) + (stwGrade * 2) + (ind4Grade * 2) +
                               (dslGrade * 1) + (dsdlGrade * 1);
@@ -21,6 +21,7 @@ function calculateCGPA() {
     // Display CGPA in a popup
     alert(`Your resultant CGPA is: ${cgpa.toFixed(2)}`);
 }
+
 
 
 
